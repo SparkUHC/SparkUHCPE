@@ -1,0 +1,26 @@
+name: SparkUHC
+author: SparkUHC Team
+version: 1.0.0
+api: [3.0.0-ALPHA4]
+main: SparkUHC\UHC\SparkUHC
+commands: 
+   uhc:
+     description: Main UHC command
+     usage: "/uhc <sub-command> [params]"
+     permission: uhc.command.main
+   scenarios:
+     description: Manage UHC scenarios
+     usage: "/scenarios [add | remove | list] [scenario]"
+     permission: uhc.command.scenarios
+     aliases: [scen]
+permissions:
+   uhc.command.main:
+     default: true
+   uhc.command.start:
+     default: op
+   uhc.command.stop:
+     default: op
+   uhc.command.scenarios:
+     default: true
+   uhc.scenarios.modify:
+     default: op
